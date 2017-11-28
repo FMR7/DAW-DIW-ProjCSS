@@ -1,0 +1,78 @@
+body {
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    font-family: 'Lucida Console'
+}
+
+.container {
+    display: grid;
+    min-width: 700px;
+    max-width: 1024px;
+    min-height: 700px;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 80px 80px 40px 1fr 80px;
+    grid-template-areas:
+        "head head"
+        "mSup mSup"
+        "nav nav"
+        "aside cont"
+        "foot foot";
+    grid-gap: 5px;
+    margin-top: 50px;
+}
+
+.item {
+    background-color: #222222;
+    color: rgba(255, 255, 255, .6);
+    border: 2px solid #AAAAAA;
+    border-radius: 8px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.header { grid-area: head;}
+.menuSup { 
+    grid-area: mSup;
+    display: flex;
+    justify-content: space-evenly;
+}
+.menuItem{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    
+    width: 150px;
+    height: 40px;
+    
+    background-color: #01253A;
+    color: #61B9ED;
+    
+    border: 2px solid #61B9ED;
+    border-radius: 8px;
+}
+.menuItem:hover{
+    background-color: #61B9ED;
+    color: #01253A;
+}
+.ini{
+    background-color: #1C9CE7;
+    color: #01253A;
+    
+    border: 2px solid #01253A;
+}
+.nav { grid-area: nav;}
+.sidebar { grid-area: aside;}
+.content { grid-area: cont;}
+.footer { grid-area: foot;}
+
+
+h1 {
+    color: #037CC3;
+}
